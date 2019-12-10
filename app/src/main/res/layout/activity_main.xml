@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_title" />
+
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rg_bottom"
+        android:layout_below="@+id/title" />
+
+    <RadioGroup
+        android:id="@+id/rg_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@android:color/white">
+
+        <RadioButton
+            android:id="@+id/rb_bottom1"
+            android:drawableTop="@drawable/main_bottom_icon_first"
+            android:text="main"
+            style="@style/MainBottom"/>
+
+        <RadioButton
+            android:id="@+id/rb_bottom2"
+            android:drawableTop="@drawable/main_bottom_icon_second"
+            android:text="second"
+            style="@style/MainBottom" />
+
+        <RadioButton
+            android:id="@+id/rb_bottom3"
+            android:drawableTop="@drawable/main_bottom_icon_third"
+            android:text="third"
+            style="@style/MainBottom" />
+        <RadioButton
+            android:id="@+id/rb_bottom4"
+            android:drawableTop="@drawable/main_bottom_icon_four"
+            android:text="four"
+            style="@style/MainBottom" />
+    </RadioGroup>
+
+
+</RelativeLayout>
