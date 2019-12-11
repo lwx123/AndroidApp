@@ -49,6 +49,9 @@ public class FirstFragment extends BaseFragment {
                     case "view":
                         startActivity(new Intent(mContext, ViewActivity.class));
                         break;
+                    case "ImageLoader":
+                        Toast.makeText(mContext,str,Toast.LENGTH_SHORT).show();
+                        break;
                     default:
                         Toast.makeText(mContext,str,Toast.LENGTH_SHORT).show();
                         break;
@@ -62,7 +65,7 @@ public class FirstFragment extends BaseFragment {
     protected void initData() {
         super.initData();
         Log.e(TAG,"initData");
-        String[] str = {"okhttp","RecyclerView","service","Thread","view"};
+        String[] str = {"okhttp","RecyclerView","service","Thread","view","ImageLoader"};
         list = new ArrayList<>();
         for (int i = 0;i < str.length;i++){
             list.add(str[i]);
